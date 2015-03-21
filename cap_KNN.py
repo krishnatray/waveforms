@@ -29,7 +29,6 @@ print "Running KNN w/ 57 neighbors and the 10 features found earlier: "
 neigh = neighbors.KNeighborsClassifier(n_neighbors=k)
 ypred = neigh.fit(xtrain, ytrain).predict(xtest)
 diff = ypred - ytest
-print diff
 count = 0 
 for i in range(len(diff)):
 	if diff[i] == 0:
@@ -37,6 +36,7 @@ for i in range(len(diff)):
 
 acc1 = float(count)/float(len(diff)) * 100
 print "Accuracy with 10 features: " + str(round(acc1, 1)) + "%"
+# 85.3%, but probably down to correlation w/ class data
 
 # KNN with 57 neighbors and all (21) features
 print "Running KNN w/ 57 neighbors and all features, for comparison: "
@@ -53,8 +53,9 @@ for i in range(len(diff)):
 
 acc2 = float(count)/float(len(diff)) * 100
 print "Accuracy with all features: " + str(round(acc2, 1)) + "%"
+# 86.0%
 print "Improvement using all features, vs top 10: " + str(round((acc2 - acc1)/acc1 * 100, 1)) + "%"
-# very little!
+# 0.9% 
 
 # KNN with 57 neighbors and only 6 features
 print "Running KNN w/ 57 neighbors and the top 6 features: "
@@ -72,9 +73,10 @@ for i in range(len(diff)):
 		count = count + 1
 
 acc3 = float(count)/float(len(diff)) * 100
-print "Accuracy with 6 features: " + str(round(acc3, 1)) + "%"
-# still (slightly) over 80%
+print "Accuracy with top 6 features: " + str(round(acc3, 1)) + "%"
+# 80.3% - still likely down to correlation
 print "Improvement using all features, vs top 6: " + str(round((acc2 - acc3)/acc3 * 100, 1)) + "%"
+# 7.1%
 
 # bagging experiment
 print "Running bagging meta-estimator w/ KNN w/ 57 neighbors and 10 max features: "
@@ -92,6 +94,7 @@ for i in range(len(diff)):
 
 acc4 = float(count)/float(len(diff)) * 100
 print "Accuracy with bagging and 10 features max: " + str(round(acc4, 1)) + "%"
+# 85.2 % - quite good, but which features were chosen?
 
 # Run with the columns most poorly correlated with the class column
 print "Running KNN w/ 57 neighbors and the features most poorly correlated with the class data: "
@@ -109,4 +112,6 @@ for i in range(len(diff)):
 
 acc5 = float(count)/float(len(diff)) * 100
 print "Accuracy with 7 least correlated features: " + str(round(acc5, 1)) + "%"
+# 86.0%
 print "Difference with results using all features: " + str(round((acc2 - acc5)/acc5 * 100, 1)) + "%"
+# 0%

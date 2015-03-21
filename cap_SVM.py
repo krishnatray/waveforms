@@ -24,6 +24,7 @@ for i in range(len(diff)):
 
 acc1 = float(count)/float(len(diff)) * 100
 print "Accuracy: " + str(round(acc1, 1)) + "%"
+# 87.2%
 
 # Run with the columns most poorly correlated with the class column
 print "Running linear SVC with least correlated features: "
@@ -41,3 +42,4 @@ for i in range(len(diff)):
 
 acc2 = float(count)/float(len(diff)) * 100
 print "Accuracy: " + str(round(acc2, 1)) + "%"
+# 56.1%
