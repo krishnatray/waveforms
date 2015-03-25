@@ -28,6 +28,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc1, 1)) + "%"
 # 84.8
+# time: 0.82s
 
 # AdaBoostClassifier with top 10 features
 print "Running AdaBoost with top 10 features: "
@@ -49,6 +50,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc2, 1)) + "%"
 # 82.1%
+# time: 0.50s
 
 # AdaBoostClassifier with 6 least correlated features
 print "Running AdaBoost with 6 least correlated features: "
@@ -70,3 +72,4 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc3, 1)) + "%"
 # 55%
+# time: 0.39s

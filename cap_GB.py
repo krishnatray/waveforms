@@ -28,6 +28,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc1, 1)) + "%"
 # 86.1%
+# time: 2.82s
 
 # GB with top 10 features
 print "Running Gradient Boosting with top 10 features: "
@@ -49,6 +50,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc2, 1)) + "%"
 # 83.5%
+# time: 1.63s
 
 # GB with 6 least correlated features
 print "Running Gradient Boosting with 6 least correlated features: "
@@ -70,3 +72,4 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc3, 1)) + "%"
 # 55.6%
+# time: 1.12s

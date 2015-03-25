@@ -29,6 +29,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc1, 1)) + "%"
 # 85.6%
+# time: 0.01s
 
 # lda w/ top 10 features
 print "Running SGD with top 10 features: "
@@ -50,6 +51,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc2, 1)) + "%"
 # 84.8%
+# time: 0.01s
 
 # lda w/ 6 least correlated features
 worst = ['f1', 'f9', 'f17', 'f18', 'f19', 'f20', 'f21']
@@ -70,3 +72,4 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc3, 1)) + "%"
 # 55.9%
+# time: 0.0s

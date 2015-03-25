@@ -29,6 +29,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc1, 1)) + "%"
 # 79.3%
+# time: 0.01s
 
 # SGD w/ top 10 features
 print "Running SGD with top 10 features: "
@@ -50,6 +51,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc2, 1)) + "%"
 # 78.7%
+# time: 0.01s
 
 # SGD w/ 6 least correlated features
 print "Running SGD w/ least correlated features: "
@@ -70,3 +72,5 @@ acc3 = float(count)/float(len(diff)) * 100
 elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc3, 1)) + "%"
+# 36.3%
+# time: 0.01s

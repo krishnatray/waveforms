@@ -30,6 +30,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc1, 1)) + "%"
 # 82.1%
+# time: 0.0s
 
 # NB w/ top 10 features
 print "Running Naive Bayes with top 10 features from KMeans: "
@@ -51,6 +52,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc2, 1)) + "%"
 # 82.6% - probably due to correlations of features with outcomes
+# time: 0.0s
 
 # NB w/ least correlated features
 print "Running Naive Bayes with least correlated features: "
@@ -72,3 +74,4 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc3, 1)) + "%"
 # 57.6%
+# time: 0.0s

@@ -41,6 +41,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy with 10 features: " + str(round(acc1, 1)) + "%"
 # 85.3%, but probably down to correlation w/ class data
+# time: 0.2s
 
 # KNN with k = sqrt(n) and all (21) features
 print "Running KNN w/ 57 neighbors and all features, for comparison: "
@@ -61,6 +62,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy with all features: " + str(round(acc2, 1)) + "%"
 # 86.0% - still have the correlated features, so...
+# time: 0.41s
 print "Improvement using all features, vs top 10: " + str(round((acc2 - acc1)/acc1 * 100, 1)) + "%"
 # 0.9% 
 
@@ -85,6 +87,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy with top 6 features: " + str(round(acc3, 1)) + "%"
 # 80.3% - still likely down to correlation
+# time: 0.12s
 print "Improvement using all features, vs top 6: " + str(round((acc2 - acc3)/acc3 * 100, 1)) + "%"
 # 7.1%
 
@@ -108,6 +111,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy with bagging and 10 features max: " + str(round(acc4, 1)) + "%"
 # 85.2 % - quite good, but which features were chosen?
+# time: 1.22s
 
 # Run with the columns most poorly correlated with the class column
 print "Running KNN w/ 57 neighbors and the features most poorly correlated with the class data: "
@@ -128,5 +132,6 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy with 7 least correlated features: " + str(round(acc5, 1)) + "%"
 # 86.0% - quite good, considering even all features result in underfitting
+# time: 0.42s
 print "Difference with results using all features: " + str(round((acc2 - acc5)/acc5 * 100, 1)) + "%"
 # 0% 

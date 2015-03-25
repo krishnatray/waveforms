@@ -28,6 +28,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc1, 1)) + "%"
 # 87.2%
+# time: 0.48s
 
 # Run with top 10 features from KMeans
 print "Running linear SVC with top 10 features: "
@@ -49,6 +50,7 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc2, 1)) + "%"
 # 85.2% - probably due to correlations between features and outcomes
+# 0.3s
 
 # Run with the columns most poorly correlated with the class column
 print "Running linear SVC with least correlated features: "
@@ -70,3 +72,4 @@ elapsed = timeit.default_timer() - start_time
 print "elapsed time: " + str(round(elapsed, 2)) + "s"
 print "Accuracy: " + str(round(acc3, 1)) + "%"
 # 56.1%
+# 0.6s
