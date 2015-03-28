@@ -158,3 +158,12 @@ print "Correlation matrix: "
 print df.corr()
 # features 4, 5, 6 7, 11, 12, 13 are correlated (> 0.4) with the class data...
 # It might be wise to use the least correlated features when classifying.
+# Let's look at this in a heat map:
+R = df.corr()
+from pylab import pcolor, show, colorbar, xticks, yticks
+from numpy import arange
+pcolor(R)
+colorbar()
+yticks(arange(0.5,22.5),range(0,22))
+xticks(arange(0.5,22.5),range(0,22))
+show()
