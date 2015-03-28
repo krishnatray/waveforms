@@ -43,7 +43,22 @@ plt.savefig('two_random_waveforms_1.png')
 plt.clf()
 ```
 
-First pairing - instances 4222 and 3789, both of class 2.  Note the distinct similarites.
+First pairing - instances 4222 and 3789, both of class 2.  Note the clear similarites, despite the noise.
 
 ![alt text](https://github.com/amaner/waveforms/blob/master/two_random_waveforms_1.png)
 
+Second pairing - instances 2102 and 1294, both of class 0.  Note again the clear similarities.
+
+![alt text](https://github.com/amaner/waveforms/blob/master/two_random_waveforms_2.png)
+
+Third pairing - instances 2556 and 2024.  These are from classes 0 and 1, respectively, and have clear differences *and* similarities.  
+
+![alt text](https://github.com/amaner/waveforms/blob/master/two_random_waveforms_3.png)
+
+Fourth pairing - instances 3918 and 1516.  These are from 0 and 2, respectively, and are very much different (would almost cancel).
+
+![alt text](https://github.com/amaner/waveforms/blob/master/two_random_waveforms_4.png)
+
+Fifth pairing - instances 2382 and 2916.  These are from classes 1 and 2, respectively, and have clear differences *and* similarities (as in the third pairing).
+
+![alt text](https://github.com/amaner/waveforms/blob/master/two_random_waveforms_5.png)
