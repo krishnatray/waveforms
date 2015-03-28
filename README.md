@@ -43,3 +43,7 @@ plt.savefig('two_random_waveforms_1.png')
 plt.clf()
 ```
 
+First pairing - instances 4222 and 3789, both of class 2.  Note the distinct similarites.
+
+![alt text](https://github.com/amaner/waveforms/blob/master/two_random_waveforms_1.png)
+
