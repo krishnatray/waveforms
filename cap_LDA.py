@@ -32,7 +32,7 @@ print "Accuracy: " + str(round(acc1, 1)) + "%"
 # time: 0.01s
 
 # lda w/ top 10 features
-print "Running SGD with top 10 features: "
+print "Running LDA with top 10 features: "
 best10 = ['f11', 'f7', 'f15', 'f6', 'f12', 'f10', 'f13', 'f5', 'f9', 'f16']
 X = df[best10]
 y = df['class']

@@ -26,11 +26,11 @@ print top10_scores
 # let's plot them
 x = range(1,11)
 plt.figure()
-plt.scatter(x,top10_scores,c='r')
+plt.scatter(top10_indices+1,top10_scores,c='r')
 plt.xlabel('index')
 plt.ylabel('importance score')
 plt.title('Top 10 Importance Scores')
-plt.show()
+plt.savefig('top_10_features.png')
 plt.clf()
-# They fall off quite rapidly, and you can see (from the graph) that
-# the top 6 are significantly higher than those that follow.
+
+
